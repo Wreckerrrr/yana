@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flowerpath Hotel</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="https://kit.fontawesome.com/8d62d56333.js" crossorigin="anonymous"></script>
+  </head>
+  <style type="text/css">
+    @media only screen and (max-width: 414px) {
+      .Customer .container .item .testimonial-text {
+        max-width: calc(100% - 40px); /* Adjust as needed */
+        margin: 0 20px; /* Adjust as needed */
+      }
+    }
+    .owl-carousel .item {
+      word-wrap: break-word; /* Ensure long words wrap to the next line */
+    }
+
+    .owl-carousel .item p {
+      overflow: hidden; /* Hide any overflow */
+      text-overflow: ellipsis; /* Add ellipsis for text that overflows */
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Limit the number of lines to prevent excessive overflow */
+      -webkit-box-orient: vertical;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="content flex_space">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="navlinks">
+          <ul id="menulist">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#admin">Admin</a></li>
+            <li><i class="fa fa-search"></i></li>
+            <li><button class="primary-btn">BOOK NOW</button></li>
+          </ul>
+          <box-icon onclick="menutoggle()" name="menu"></box-icon>
+          <!-- <span class="fa fa-bars" onclick="menutoggle()">Hello</span> -->
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <div class="content">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="images/banner-1.png" alt="" />
+            <div class="text">
+              <h1>Flowerpath Hotel</h1>
+              <p>Discover the path to blooming sensation.</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn">CONTACT US</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/banner-2.png" alt="" />
+            <div class="text">
+              <h1>Sleep in Wonder</h1>
+              <p>We make sure you stay in comfort.</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn">CONTACT US</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/banner-3.png" alt="" />
+            <div class="text">
+              <h1>Smell the Flower Fiesta</h1>
+              <p>Flower, flower, pretty flowers blooming all around.</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn">CONTACT US</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: [
+          "<i class = 'fa fa-chevron-left'></i>",
+          "<i class = 'fa fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+
+    <section class="book">
+      <div class="container flex_space">
+        <div class="text">
+          <h1><span>Book </span> Your Rooms</h1>
+        </div>
+        <div class="form">
+          <form class="grid">
+            <input type="date" placeholder="Arrival Date" />
+            <input type="date" placeholder="Departure Date" />
+            <input type="number" placeholder="Adults" />
+            <input type="number" placeholder="Children" />
+            <input type="submit" value="CHECK AVAILABILITY" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="about top">
+      <div class="container flex">
+        <div class="left">
+          <div class="heading">
+            <h1>WELCOME</h1>
+            <h2>Flowerpath Hotel</h2>
+          </div>
+          <p>
+            At FlowerPath Hotel, we believe that every guest deserves to
+            experience the beauty of nature intertwined with the comforts of
+            modern hospitality. Nestled amidst lush gardens and fragrant blooms,
+            our hotel is your serene sanctuary away from the hustle and bustle
+            of everyday life.From the moment you step through our doors, you'll
+            be enveloped in a world of tranquility and charm. Allow us to take
+            care of every detail of your stay, from arranging exquisite floral
+            arrangements in your room to curating personalized experiences
+            tailored to your preferences..
+          </p>
+          <button class="primary-btn">ABOUT US</button>
+        </div>
+        <div class="right">
+          <img src="images/about.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="counter top">
+      <div class="container grid">
+        <div class="box">
+          <h1>2500</h1>
+          <hr />
+          <span>Customer</span>
+        </div>
+        <div class="box">
+          <h1>1250</h1>
+          <hr />
+          <span>Happy Customer</span>
+        </div>
+        <div class="box">
+          <h1>150</h1>
+          <hr />
+          <span>Expert Technicians</span>
+        </div>
+        <div class="box">
+          <h1>3550</h1>
+          <hr />
+          <span>Desktop Reaired</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="rooms">
+      <div class="container top">
+        <div class="heading">
+          <h1>EXPLORE</h1>
+          <h2>Our Rooms</h2>
+          <p>
+            We invite you to relax, rejuvenate, and create unforgettable
+            memories with us.
+          </p>
+        </div>
+
+        <div class="content mtop">
+          <div class="owl-carousel owl-carousel1 owl-theme">
+            <div class="items">
+              <div class="image">
+                <img src="images/room-1.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Simple Sakura Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  Treat yourself and your loved ones to a getaway they'll never
+                  forget. Have a joyous vacation with us!
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P2500
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/room-2.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Wisteria Night Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  Our suite offers refined elegance and all the amenities you
+                  need for a productive yet relaxing stay.
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P3500
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/room-3.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Cherry Golden Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  Embrace tranquility and solitude in our cozy Cherry Golden
+                  Room at FlowerPath Hotel
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P4500
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/room-4.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Peony Goldie Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  After a day of pampering, retire to your elegantly appointed
+                  room, where comfort awaits.
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P5500
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/room-5.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Rosie Galore Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  A sanctuary of romance and enchantment. Where every moment is
+                  filled with bliss.
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P6000
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/room-6.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Sakura Elegance Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  Calling all nature lovers! This is the perfect basecamp for
+                  your outdoor escapades.
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P6500
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/room-7.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Dahlia's Garden Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  Create a haven of serenity where you can indulge in comfort
+                  amidst the beauty of nature.
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P7000
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/room-8.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Royal Pink Suite</h2>
+                <div class="rate flex">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  Experience the epitome of luxury and comfort. Ideal for
+                  discerning monarchs of refined elegance.
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">BOOK NOW</button>
+                  <h3>
+                    P10000
+                    <span>
+                      <br />
+                      Per Night
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(".owl-carousel1").owlCarousel({
+        loop: true,
+        margin: 40,
+        nav: true,
+        dots: false,
+        navText: [
+          "<i class = 'fa fa-chevron-left'></i>",
+          "<i class = 'fa fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+            margin: 10,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+
+    <section class="gallery">
+      <div class="container top">
+        <div class="heading">
+          <h1>PHOTOS</h1>
+          <h2>Our Gallery</h2>
+          <p>
+            FlowerPath Hotel beckons with its unrivaled charm that is as
+            unforgettable as it is
+          </p>
+        </div>
+      </div>
+
+      <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-1.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-2.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-3.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-4.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-5.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-6.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-4.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-3.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-1.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img">
+              <img src="images/gallery-6.png" alt="" />
+            </div>
+            <div class="overlay">
+              <span class="fa fa-plus"> </span>
+              <h3>Photo Title Here.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(".owl-carousel1").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        navText: [
+          "<i class = 'fa fa-chevron-left'></i>",
+          "<i class = 'fa fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 4,
+          },
+          1000: {
+            items: 6,
+          },
+        },
+      });
+    </script>
+
+    <section class="services top">
+      <div class="container">
+        <div class="heading">
+          <h1>SERVICES</h1>
+          <h2>Our Services</h2>
+          <p>
+            We tailor to your preferences and anticipate your every need before
+            you even realize it
+          </p>
+        </div>
+
+        <div class="content flex_space">
+          <div class="left grid2">
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h3>Delicious Food</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-person-biking"></i>
+                <h3>Fitness</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Restaurant</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-spa"></i>
+                <h3>Beauty Spa</h3>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img src="images/service.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="Customer top">
+      <div class="container">
+        <div
+          style="overflow: hidden"
+          class="owl-carousel owl-carousel2 owl-theme"
+        >
+          <div class="item">
+            <i class="fa-solid fa-quote-right"></i>
+            <div class="testimonial-text">
+              <p>
+                Our meticulously designed rooms and suites offer a seamless
+                blend of modern amenities and timeless charm, ensuring a stay
+                that exceeds every expectation. Whether you're indulging in a
+                rejuvenating spa treatment, savoring delectable cuisine at our
+                gourmet restaurant, or simply unwinding by the poolside with
+                panoramic views of nature's beauty, every moment at FlowerPath
+                Hotel is an unforgettable experience
+              </p>
+            </div>
+            <h3>Allana Minami</h3>
+            <label>Chief Executive Officer</label>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-quote-right"></i>
+            <div class="testimonial-text">
+              <p>
+                From the moment you're greeted with a heartfelt welcome to the
+                moment you bid us farewell, our dedicated team is committed to
+                ensuring your stay is nothing short of extraordinary. Whether
+                it's arranging bespoke experiences tailored to your preferences
+                or anticipating your every need before you even realize it, we
+                take pride in going above and beyond to create moments that
+                linger in your memories long after you've checked out.
+              </p>
+            </div>
+            <h3>Ivana Mallorca</h3>
+            <label>Hotel Manager</label>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-quote-right"></i>
+            <div class="testimonial-text">
+              <p>
+                Step into a world of refined elegance and unmatched
+                sophistication at FlowerPath Hotel, where luxury knows no bounds
+                and every corner is infused with a sense of grandeur. As you
+                stroll through our meticulously landscaped gardens or unwind in
+                the plush comfort of your meticulously appointed suite, you'll
+                find yourself immersed in an atmosphere of timeless beauty and
+                unparalleled grace.
+              </p>
+            </div>
+            <h3>Michael Dorativo</h3>
+            <label>Director of Operations</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(".owl-carousel2").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        dots: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+
+    <section class="news top rooms">
+      <div class="container">
+        <div class="heading">
+          <h1>NEWS</h1>
+          <h2>Our News</h2>
+          <p>
+            Elevate your being by joining our newsletter for hot and exciting
+            news
+          </p>
+        </div>
+
+        <div class="content flex">
+          <div class="left grid2">
+            <div class="items">
+              <div class="image">
+                <img src="images/blog-1.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Most Sought Room</h2>
+                <div class="admin flex">
+                  <i class="fa fa-user"></i>
+                  <label>Admin</label>
+                  <i class="fa fa-heart"></i>
+                  <label>500</label>
+                  <i class="fa fa-comments"></i>
+                </div>
+                <p>
+                  Our elegantly appointed rooms to our world-class amenities,
+                  indulge in a stay that promises moments of relaxation and
+                  refinement.
+                </p>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="images/blog-2.png" alt="" />
+              </div>
+              <div class="text">
+                <h2>Be Greeted, Be Gleeful!</h2>
+                <div class="admin flex">
+                  <i class="fa fa-user"></i>
+                  <label>Admin</label>
+                  <i class="fa fa-heart"></i>
+                  <label>500</label>
+                  <i class="fa fa-comments"></i>
+                </div>
+                <p>
+                  Book now and discover the epitome of hospitality, where every
+                  guest is treated to an extraordinary experience they'll
+                  cherish forever.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="box flex">
+              <div class="img">
+                <img src="images/blog-s1.png" alt="" />
+              </div>
+              <div class="stext">
+                <h2>Flower Spa</h2>
+                <p>
+                  Breathe anew in our Flowerpath Hotel indoor spa where you can
+                  relax in peace and have massage.
+                </p>
+              </div>
+            </div>
+            <div class="box flex">
+              <div class="img">
+                <img src="images/blog-s2.png" alt="" />
+              </div>
+              <div class="stext">
+                <h2>Indoor Swimming Pool</h2>
+                <p>
+                  Flowerpath Hotel also greets its visitors with newly prepared
+                  bath water in our luxurious indoor pool.
+                </p>
+              </div>
+            </div>
+            <div class="box flex">
+              <div class="img">
+                <img src="images/blog-s3.png" alt="" />
+              </div>
+              <div class="stext">
+                <h2>Barbie Pink Terrace</h2>
+                <p>
+                  Discover a whole lot breathtaking panoramic view of our manor
+                  in the Barbie Flowerpath terrace.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter mtop">
+      <div class="container flex_space">
+        <h1>Subscribe to Our Newsletter</h1>
+        <input type="text" placeholder="Your Email" />
+        <input type="submit" value="Subscribe" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="container grid">
+        <div class="box">
+          <img src="images/logo-2.png" alt="" />
+          <p>
+            FlowerPath Hotel is a premier destination for luxury accommodation,
+            offering an exquisite blend of elegance, comfort, and exceptional
+            service. Our meticulously designed rooms and suites are tastefully
+            furnished to ensure a relaxing and memorable stay for every guest.
+            With a range of amenities including gourmet dining options,
+            state-of-the-art fitness facilities, and rejuvenating spa services,
+            FlowerPath Hotel caters to the needs of discerning travelers seeking
+            unparalleled hospitality.
+          </p>
+
+          <div class="icon">
+            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2>Links</h2>
+          <ul>
+            <li>Company History</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Services</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2>Contact Us</h2>
+          <p>Have questions or inquiries? Feel free to reach out to us!</p>
+          <i class="fa fa-location-dot"></i>
+          <label
+            >#287A Lily Street, Marigold Avenue, Calamba, Philippines.</label
+          >
+          <br />
+          <i class="fa fa-phone"></i>
+          <label>[63] 123 456 789</label> <br />
+          <i class="fa fa-envelope"></i>
+          <label>info@flowerpath.com</label> <br />
+        </div>
+      </div>
+    </footer>
+
+    <div class="legal">
+      <p class="container">
+        Copyright (c) 2022 Copyright Holder All Rights Reserved.
+      </p>
+    </div>
+
+    <script>
+      var menulist = document.getElementById("menulist");
+      menulist.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (menulist.style.maxHeight == "0px") {
+          menulist.style.maxHeight = "100vh";
+        } else {
+          menulist.style.maxHeight = "0px";
+        }
+      }
+    </script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-jvqyL1fY+aYfVZP0egvqoeOhfe5Jw5FUE+eC7PlL2Yy6AzN5wF9AmnYoVVHklAt+9kVUYg3b7lmUa3e9BCFLPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
